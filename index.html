@@ -1,0 +1,477 @@
+
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Sahid | Video Editor Portfolio</title>
+
+  <!-- External CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Particle.js Library -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <style>
+    /* Reset some default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Full-screen particles background */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1; /* Push the particles behind everything else */
+    }
+
+    /* Styling the body to make sure it takes full height */
+    body, html {
+      width: 100%;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden; /* Prevent horizontal scroll if any overflow */
+    }
+
+    /* Navbar styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent navbar */
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* Hero Section */
+    #hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      padding: 0 10px;
+      background: transparent; /* Transparent background to let particles show through */
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-photo img {
+      width: 370px;
+      height: 360px;
+     border-radius: 0%;
+      object-fit: cover;
+      border: 0px solid white;
+    }
+
+    .hero-title {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .highlight-name {
+      color: #ff6347;
+    }
+
+    .highlight-role {
+      color: #ffffff;
+    }
+
+    .btn-view-work {
+      background-color: #ffed47;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-view-work:hover {
+      background-color: #FFA500;
+    }
+  </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+  <!-- Particle.js Container -->
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+<header class="navbar">
+  <h1 class="logo">Md Sahid</h1>
+  <nav>
+    <ul id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  
+  </nav>
+</header>
+
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-photo">
+        <img src="profile photo 2.png" alt="Md Sahid's Profile Photo" />
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-title">
+          I’m <span class="highlight-name">Md Sahid</span>
+        </h1>
+        <p class="hero-subtitle">
+          A <span class="highlight-role">Video Editor & Motion Designer</span>
+        </p>
+        <a href="#portfolio" class="btn-view-work">View My Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Particle.js Configuration -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#ffffff" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" },
+          "polygon": { "nb_sides": 5 }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false }
+        },
+        "size": {
+          "value": 5,
+          "random": true,
+          "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
+          "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+          "repulse": { "distance": 200, "duration": 0.4 },
+          "push": { "particles_nb": 4 },
+          "remove": { "particles_nb": 2 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+</body>
+</html>
+
+
+  
+  
+  
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p> I am a passionate video editor and motion designer with a focus on
+       creating engaging and impactful content. With expertise in 
+       documentary-style videos, podcast editing, and social media reels,
+        I blend technical skills with creative storytelling to bring ideas to life.
+         I aim to deliver high-quality visuals that connect with audiences and align with client goals. </p>
+
+         <p> My toolkit includes Adobe premiere pro, After Effects, Photoshop, and Illustrator, 
+          empowering me to create dynamic motion graphics and polished edits.
+           I am committed to continuous learning and collaboration, ensuring each project exceeds expectations.</p>
+
+    <div class="skills">
+      <p>🎥 Video Editing</p>
+      <p>🎨 Motion Graphics</p>
+      <p>📝 storytelling  </p> 
+    </div>
+  </section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <h2 class="portfolio-heading">My Work</h2>
+  <div class="gallery">
+
+ <!-- Video Container for YouTube Link 1 -->
+ <div class="video-container">
+  <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/4L8FeNwUmXw" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
+  <p class="project-title">Hackathon and Coding Club Orientation</p>
+</div>
+
+    <!-- Video Container for YouTube Link 2 -->
+ <div class="video-container">
+  <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/ZVBc_t8HOPQ" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
+  <p class="project-title">Coding club glimpses</p>
+</div>
+
+      <!-- Video Container for YouTube Link 3 -->
+ <div class="video-container">
+  <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/Sb6MVpvnoSw" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
+  <p class="project-title">EPL Teaser</p>
+</div>
+
+<!-- Video Container for YouTube Link 4 -->
+<div class="video-container">
+  <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/a-H4FUcx-R8" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
+  <p class="project-title">Podcast Editing</p>
+</div>
+
+   <!-- Video Container for YouTube Link 5 -->
+<div class="video-container">
+  <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/Wmn3Qhyv8hA" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
+  <p class="project-title">Documentary Style</p>
+</div>
+
+  <!-- Video Container for YouTube Link 6 -->
+  <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/JdE4lTrC53M" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <p class="project-title">3D Card/Motion Visuals</p>
+  </div>
+
+   <!-- Video Container for YouTube Link 7 -->
+  <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/aTT-k9cr1HQ" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <p class="project-title">Glass Break Effect</p>
+  </div>
+
+     <!-- Video Container for YouTube Link 8 -->
+  <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/VgAMrSR-tPk" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <p class="project-title">Podcast Teaser</p>
+  </div>
+
+    <!-- Video Container for YouTube Link 9 -->
+  <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/cgmPMeCQjTc" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <p class="project-title">Independence Day Motion Poster</p>
+  </div>
+
+     <!-- Video Container for YouTube Link 10 -->
+  <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/gjTwxxCqZDA" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <p class="project-title">Motion Poster 2</p>
+  </div>
+
+    <!-- Video Container for YouTube Link 11 -->
+  <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/kxAvl7rPsIs" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <p class="project-title">Don koe style</p>
+  </div>
+
+    <!-- Video Container for YouTube Link 12 -->
+  <div class="video-container">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/64AXV-9yFU0" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <p class="project-title">Glass animation showing reality of life</p>
+  </div>
+
+</section>
+
+    
+  
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <!-- Left Side: Contact Form -->
+    <div class="form-container">
+      <h2>Get in Touch</h2>
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="d8d69222-c0f1-460d-a753-58e071d10eec">
+
+        <input type="text" name = name placeholder="First Name" required />
+        <input type="email"  name="email" placeholder="Email" required />
+        <input type="tel"  name="number"  placeholder="Phone Number" />
+        <textarea name="message"  placeholder="What do you have in mind?" rows="4"></textarea>
+        <button type="submit" >Submit</button>
+      </form>
+    </div>
+
+    <!-- Right Side: Info and Social Media -->
+    <div class="info-container">
+      <h2>Reach us at</h2>
+      <p>Let's connect! Feel free to reach out for collaborations, projects, or inquiries.</p>
+
+      <!-- Horizontal Circular Social Media Icons -->
+      <div class="social-circles">
+        <a href="https://www.linkedin.com/in/mdsahid" target="_blank">
+          <div class="circle">
+            <img src="LINKedin logog.png" alt="LinkedIn" />
+          </div>
+        </a>
+        <a href="https://www.instagram.com/shine_with_sahid/profilecard/?igsh=YjZlNWtwNnAwcTB2" target="_blank">
+          <div class="circle">
+            <img src="insta logo.png" alt="Instagram" />
+          </div>
+        </a>
+        <a href="mailto:your-mdsahid4700@gmail.com" target="_blank">
+          <div class="circle">
+            <img src="maillogo.png" alt="Email" />
+          </div>
+        </a>
+      </div>
+ <!-- Map Section -->
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0544453173525!2d77.59456327587844!3d12.971598190854734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670e4b1a7df%3A0xf5fdf4d57d34b5b!2sBengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1635128391948!5m2!1sen!2sin"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section> 
+
+  <script src="script.js"></script>
+
+  
+
+</body>
+</html>
